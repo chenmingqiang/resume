@@ -2,7 +2,11 @@
 \ProvidesClass{resume}[2014/03/03 My custom CV class]
 \LoadClass{article}
 \RequirePackage{titlesec}
+\RequirePackage{graphicx}
 \RequirePackage{CJK}
+
+\graphicspath{ {logo/} }
+\pagestyle{empty}
 
 \titleformat{\section}         
   {\Large\scshape\raggedright} 
@@ -18,8 +22,13 @@
 \newcommand{\datedsection}[2]{
   \section[#1]{#1 \hfill #2}
 }
+
 \newcommand{\datedsubsection}[2]{
   \subsection[#1]{#1 \hfill #2}
+}
+
+\newcommand{\careersubsection}[2]{
+  \subsection[#1]{$\begin{array}{l}\includegraphics[width=3cm,height=1cm]{#1}\end{array}$ \hfill #2}
 }
 
 \newcommand{\name}[1]{
