@@ -3,6 +3,8 @@
 \LoadClass{article}
 \RequirePackage{titlesec}
 \RequirePackage{graphicx}
+\RequirePackage{geometry}
+\geometry{left=2.5cm,right=2.5cm,top=1.5cm,bottom=1.5cm}
 \RequirePackage{CJK}
 
 \graphicspath{ {logo/} }
@@ -35,8 +37,16 @@
   \centerline{\Huge{#1}}
 }
 
+\newcommand{\longcontact}[4]{
+    #1 {\Large\textperiodcentered} #2 {\Large\textperiodcentered} #3 {\Large\textperiodcentered} #4 {\Large\textperiodcentered} 
+}
+
 \newcommand{\contact}[2]{
-    #1 {\Large\textperiodcentered} #2 {\Large\textperiodcentered} 
+   \centerline{#1 {\Large\textperiodcentered} #2 } 
+}
+
+\newcommand{\project}[2] {
+   {\noindent\large\textbf #1} \hfill #2
 }
 
 \newcommand{\workitems}[3]{
